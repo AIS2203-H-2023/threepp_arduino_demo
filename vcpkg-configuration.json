@@ -1,0 +1,15 @@
+{
+  "default-registry": {
+    "kind": "git",
+    "repository": "https://github.com/Microsoft/vcpkg",
+    "baseline": "1ba9a2591f15af5900f2ce2b3e2bf31771e3ac48"
+  },
+  "registries": [
+    {
+      "kind": "git",
+      "baseline": "da72f6c1d7be68a1f9fd537fbf312b252396d87e",
+      "repository": "https://github.com/Ecos-platform/vcpkg-registry",
+      "packages": [ "threepp", "serial" ]
+    }
+  ]
+}
