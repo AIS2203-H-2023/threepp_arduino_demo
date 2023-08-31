@@ -5,23 +5,26 @@
 
 using namespace ArduinoJson;
 
-Potpin p1(A0);
-Potpin p2(A1);
+int main() {
 
-void setup() {
+  init(); // arduino requirement
+
   Serial.begin(9600);
-}
 
-void loop() {
-  int potVal1 = p1.read();
-  int potVal2 = p2.read();
-
+  Potpin p1(A0);
+  Potpin p2(A1);
   StaticJsonDocument<16> doc;
-  doc["potVal1"] = potVal1;
-  doc["potVal2"] = potVal2;
 
-  serializeJson(doc, Serial);
-  Serial.println();
+  while (true) {
+    int potVal1 = p1.read();
+    int potVal2 = p2.read();
 
-  delay(100);
+    doc["potVal1"] = potVal1;
+    doc["potVal2"] = potVal2;
+
+    serializeJson(doc, Serial);
+    Serial.println();
+
+    delay(100);
+  }
 }
