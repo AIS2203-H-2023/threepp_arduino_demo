@@ -4,7 +4,7 @@ This is a demo of connecting an Arduino with a desktop C++ program.
 Communication is done through serial and the data is serialized on the wire as JSON.
 
 Threepp is used to visualise the data received from the Arduino.
-Platformio, which is integrated in CLion, is used to handle the Arduino code.
+[PlatformIO](https://platformio.org/), which is integrated in CLion, is used to handle the Arduino code.
 
 As `vcpkg` is used, you need to tell CMake about it in order for dependency resolution to work: 
 
